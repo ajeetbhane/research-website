@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dr. Ajeet Bhagwat Bhane | Research Profile</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background: #ffffffee;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      max-width: 800px;
+      width: 90%;
+    }
+    h1, h2 {
+      color: #2d0b5e;
+    }
+    a {
+      color: #5a189a;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .card {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 15px 0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transform: perspective(1000px) rotateX(2deg);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: perspective(1000px) rotateX(0deg) scale(1.02);
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.85em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dr. Ajeet Bhagwat Bhane</h1>
+    <p><strong>Affiliation:</strong> Department of Mechanical Engineering, SND COE & RC, SPPU, Maharashtra, India</p>
+    <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=_uFidiYAAAAJ" target="_blank">View Profile</a></p>
+
+    <h2>Citation Metrics</h2>
+    <div class="card" id="metrics">
+      Loading citation data...
+    </div>
+
+    <h2>Research Interests</h2>
+    <div class="card">
+      Mechanical Design, Robotics & Automation, Fluid Mechanics, Thermal Systems
+    </div>
+
+    <h2>Selected Publications</h2>
+    <div class="card">
+      <strong>Machining of hybrid Al alloys</strong> (2025) — Citations: <span id="pub1">[Fetching]</span>
+    </div>
+    <div class="card">
+      <strong>Torque to Preload in Bolt Joints</strong> (2024) — Citations: <span id="pub2">[Fetching]</span>
+    </div>
+
+    <h2>Contact</h2>
+    <div class="card">
+      Email: <a href="mailto:ajeetbhane@gmail.com">ajeetbhane@gmail.com</a>
+    </div>
+
+    <div class="footer">
+      &copy; 2025 Dr. Ajeet Bhagwat Bhane | Personal Research Website
+    </div>
+  </div>
+
+  <script>
+    fetch('https://serpapi.com/search.json?engine=google_scholar_author&author_id=_uFidiYAAAAJ&api_key=demo')
+      .then(response => response.json())
+      .then(data => {
+        const metrics = document.getElementById('metrics');
+        if(data && data.author){
+          metrics.innerHTML = `
+            <strong>Total Citations:</strong> ${data.author.cited_by} <br>
+            <strong>h-index:</strong> ${data.author.h_index} <br>
+            <strong>i10-index:</strong> ${data.author.i10_index}
+          `;
+          document.getElementById('pub1').textContent = data.articles[0]?.cited_by_count ?? 'N/A';
+          document.getElementById('pub2').textContent = data.articles[1]?.cited_by_count ?? 'N/A';
+        } else {
+          metrics.textContent = 'Could not fetch citation data.';
+        }
+      })
+      .catch(() => {
+        document.getElementById('metrics').textContent = 'Error loading citation data.';
+      });
+  </script>
+</body>
+</html>
