@@ -1,4 +1,92 @@
 <!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dr. Ajeet Bhagwat Bhane | Research Profile</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+    .container {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      padding: 30px;
+      max-width: 850px;
+      width: 90%;
+      animation: fadeIn 1s ease-in-out;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #ff6ec4, #7873f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+    .tab {
+      cursor: pointer;
+      padding: 12px 20px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #ff6ec4, #7873f5);
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .tab:hover, .tab.active {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #43e97b, #38f9d7);
+    }
+    .content {
+      display: none;
+      animation: fadeIn 0.8s;
+    }
+    .content.active {
+      display: block;
+    }
+    .card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 15px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px) scale(1.02);
+    }
+    a {
+      color: #80ffdb;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.85em;
+      color: #ddd;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
