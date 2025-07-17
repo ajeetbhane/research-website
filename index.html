@@ -1,71 +1,180 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dr. Ajeet Bhagwat Bhane - Research Profile</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; background: #f8f9fa; }
-        nav { background: #004080; color: #fff; padding: 10px; text-align: center; }
-        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        .container { max-width: 900px; margin: auto; padding: 20px; background: #fff; }
-        .profile-img { width: 200px; border-radius: 50%; display: block; margin: 20px auto; }
-        h1, h2 { color: #004080; }
-        ul { list-style: square inside; }
-        a { color: #0066cc; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .card { background: #e9f1fb; border-radius: 8px; padding: 15px; margin: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dr. Ajeet Bhagwat Bhane | Research Profile</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+    .container {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      padding: 30px;
+      max-width: 850px;
+      width: 90%;
+      animation: fadeIn 1s ease-in-out;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #ff6ec4, #7873f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+    .tab {
+      cursor: pointer;
+      padding: 12px 20px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #ff6ec4, #7873f5);
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .tab:hover, .tab.active {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #43e97b, #38f9d7);
+    }
+    .content {
+      display: none;
+      animation: fadeIn 0.8s;
+    }
+    .content.active {
+      display: block;
+    }
+    .card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 15px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px) scale(1.02);
+    }
+    a {
+      color: #80ffdb;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.85em;
+      color: #ddd;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div class="container" id="home">
-        <img src="profile.jpg" alt="Dr. Ajeet Bhagwat Bhane" class="profile-img" />
-        <h1>Dr. Ajeet Bhagwat Bhane</h1>
-        <p><strong>Asst. Professor, Mechanical Engineering</strong><br>
-        SND College of Engineering & Research Center, Yeola Dist: Nasik<br>
-        <strong>Email:</strong> ajeetbhane@gmail.com | <strong>Mobile:</strong> +91 9960528289>
-
-        <div class="card" id="about">
-            <h2>About Me</h2>
-            <p>Dedicated academician with over 16+ years teaching experience, specializing in stochastic FEM, tribology & vibration studies of composite plates.</p>
-            <h3>Education</h3>
-            <ul>
-                <li>Ph.D. (Mechanical), 2024</li>
-                <li>M.E. Mechanical (Design Engineering), 2015</li>
-                <li>B.E. Mechanical, 2009</li>
-            </ul>
-            <h3>Professional Roles</h3>
-            <ul>
-                <li>PG Coordinator, Recognised Guide</li>
-                <li>Lab Incharge, IIC President, NBA Coordinator, NAAC Criteria Head</li>
-                <li>Guided 50+ projects, Editorial Board Member</li>
-            </ul>
-        </div>
-
-        <div class="card" id="research">
-            <h2>Research & Publications</h2>
-            <p>Ph.D. on Micromechanical Analysis on Stochastic Finite Element Free Vibration of Laminated Composite Plates.</p>
-            <ul>
-                <li>15+ papers in international journals & conferences</li>
-                <li>Patent: Study & Investigation on Mechanical & Tribological Properties of Nano Composites (2023)</li>
-                <li>Member: LMISTE, LMSMAE, IFERP, AIAA</li>
-            </ul>
-            <p><a href="Dr. Ajeet Resume Dec 2024.pdf">Download Full CV</a></p>
-        </div>
-
-        <div class="card" id="contact">
-            <h2>Contact</h2>
-            <p>📍 Nasik, Maharashtra, India</p>
-            <p><a href="mailto:ajeetbhane@gmail.com">Email Me</a> | <a href="https://scholar.google.com">Google Scholar</a> | <a href="https://linkedin.com">LinkedIn</a> | <a href="https://researchgate.net">ResearchGate</a></p>
-        </div>
+  <div class="container">
+    <h1>Dr. Ajeet Bhagwat Bhane</h1>
+    <div class="tabs">
+      <div class="tab active" data-tab="profile">Profile</div>
+      <div class="tab" data-tab="metrics">Metrics</div>
+      <div class="tab" data-tab="research">Research</div>
+      <div class="tab" data-tab="contact">Contact</div>
     </div>
+
+    <div class="content active" id="profile">
+      <div class="card">
+        <strong>Affiliation:</strong><br>
+        Department of Mechanical Engineering, SND COE & RC, SPPU, Maharashtra, India
+      </div>
+      <div class="card">
+        <strong>Google Scholar:</strong><br>
+        <a href="https://scholar.google.com/citations?user=_uFidiYAAAAJ" target="_blank">View Profile</a>
+      </div>
+    </div>
+
+    <div class="content" id="metrics">
+      <div class="card" id="metrics-data">
+        Loading citation data...
+      </div>
+    </div>
+
+    <div class="content" id="research">
+      <div class="card">
+        <strong>Research Interests:</strong><br>
+        Mechanical Design, Robotics & Automation, Fluid Mechanics, Thermal Systems
+      </div>
+      <div class="card">
+        <strong>Selected Publications:</strong><br>
+        <ul>
+          <li><strong>Machining of hybrid Al alloys</strong> (2025) — Citations: <span id="pub1">[Fetching]</span></li>
+          <li><strong>Torque to Preload in Bolt Joints</strong> (2024) — Citations: <span id="pub2">[Fetching]</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content" id="contact">
+      <div class="card">
+        Email: <a href="mailto:ajeetbhane@gmail.com">ajeetbhane@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      &copy; 2025 Dr. Ajeet Bhagwat Bhane | Personal Research Website
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+
+    fetch('https://serpapi.com/search.json?engine=google_scholar_author&author_id=_uFidiYAAAAJ&api_key=demo')
+      .then(response => response.json())
+      .then(data => {
+        const metrics = document.getElementById('metrics-data');
+        if(data && data.author){
+          metrics.innerHTML = `
+            <strong>Total Citations:</strong> ${data.author.cited_by}<br>
+            <strong>h-index:</strong> ${data.author.h_index}<br>
+            <strong>i10-index:</strong> ${data.author.i10_index}
+          `;
+          document.getElementById('pub1').textContent = data.articles[0]?.cited_by_count ?? 'N/A';
+          document.getElementById('pub2').textContent = data.articles[1]?.cited_by_count ?? 'N/A';
+        } else {
+          metrics.textContent = 'Could not fetch citation data.';
+        }
+      })
+      .catch(() => {
+        document.getElementById('metrics-data').textContent = 'Error loading citation data.';
+      });
+  </script>
 </body>
 </html>
-
