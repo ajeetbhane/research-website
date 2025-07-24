@@ -1,140 +1,649 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Ajeet Bhagwat Bhane</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Ajeet Bhagwat Bhane – Research Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
+    html, body {
       margin: 0;
       padding: 0;
-      color: #333;
-      background-color: #f4f4f4;
+      height: 100%;
+      font-family: 'Urbanist', sans-serif;
+      background: url('https://wallpaperaccess.com/full/926400.jpg') center center/cover fixed no-repeat;
+      color: #F3F4F6;
     }
-    header {
-      background: url('banner.jpg') no-repeat center center/cover;
-      color: white;
-      padding: 100px 20px 60px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.25rem;
+    .overlay {
+      background: rgba(15, 23, 42, 0.50);
+      min-height: 100vh;
+      padding-bottom: 4rem;
     }
     .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #fff;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      max-width: 1280px;
+      margin: auto;
+      padding: 2rem;
     }
-    section {
-      margin-bottom: 40px;
+    .tab-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
     }
-    section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      color: #004080;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #f9f9f9;
-      border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 10px;
-    }
-    footer {
-      background: #004080;
+    .tab-button {
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.75rem;
+      background: linear-gradient(135deg, #1F140D, #FF191D);
       color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
+    .tab-button:hover {
+      background: linear-gradient(135deg, #F0A13A, #6A5A4B);
+      transform: translateY(-4px);
+    }
+    .tab-button.active {
+      background: linear-gradient(135deg, #06b6d4, white);
+      transform: scale(1.05);
+    }
+    .tab-content {
+      display: none;
+      margin-top: 2rem;
+      animation: fadeIn 0.6s ease-in-out;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 1rem;
+      backdrop-filter: blur(12px);
+    }
+    .tab-content.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #22d3ee;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #E0F2FE;
+    }
+    ul.list-disc {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+    details[open] summary {
+      color: #f472b6;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Dr. Ajeet Bhagwat Bhane</h1>
-    <p>Assistant Professor | Mechanical Engineering</p>
-    <p><strong>Email:</strong> ajeet.bhane@sndcoe.ac.in | <strong>Mobile:</strong> +91 9960528289</p>
+<div class="overlay">
+  <header class="text-center pt-12">
+    <img src="https://www.srespune.org/data/uploads/faculty/1691576474.jpg" alt="Dr. Ajeet Photo" class="profile-img mx-auto mb-4">
+    <h1 class="text-4xl font-bold text-white">Dr. Ajeet Bhagwat Bhane</h1>
+    <p class="text-xl text-gray-300">Assistant Professor | Mechanical Engineering | Researcher Profile</p>
   </header>
-  <div class="container">
-    <section>
-      <h2>About Me</h2>
-      <p>Experienced academic with a Ph.D. in Mechanical Engineering, specializing in Design, Vibration, and Tribology. Passionate about guiding students and contributing to research and innovation.</p>
-    </section>
-    <section>
-      <h2>Experience</h2>
-      <ul>
-        <li>Assistant Professor, SRCOE Pune (2016–Present)</li>
-        <li>Assistant Professor, SND COE & RC Yeola (2012–2016)</li>
-        <li>Lecturer, Vikhe Patil Institute, Loni (2008–2012)</li>
+
+  <main class="container">
+    <div class="tab-nav">
+      <div class="tab-button active" onclick="showTab('overview')">Overview</div>
+      <div class="tab-button" onclick="showTab('research area')">Research area</div>
+	  <div class="tab-button" onclick="showTab('research profile')">Research profile</div>
+      <div class="tab-button" onclick="showTab('publications')">Publications</div>
+      <div class="tab-button" onclick="showTab('patents')">Patents</div>
+	  <div class="tab-button" onclick="showTab('book')">Book</div>
+      <div class="tab-button" onclick="showTab('teaching')">Teaching</div>
+      <div class="tab-button" onclick="showTab('academics')">Academics</div>
+      <div class="tab-button" onclick="showTab('contact')">Contact</div>
+    </div>
+
+    <div id="overview" class="tab-content active">
+      <h2>Overview</h2>
+      <p>Ph.D. in Mechanical Engineering (2024) with 15+ years of academic and research experience. Expert in Design, Tribology, and AI-integrated mechanical systems.</p>
+    </div>
+
+    <div id="research area" class="tab-content">
+      <h2>Research area</h2>
+      <ul class="list-disc">
+        <li>Finite Element Analysis</li>
+        <li>Tribology and Materials</li>
+        <li>Smart Systems and AI Applications in Mechanics</li>
       </ul>
-    </section>
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li>Ph.D. in Mechanical Engineering, 2024</li>
-        <li>M.E. in Design Engineering, 2015</li>
-        <li>B.E. in Mechanical Engineering, 2011</li>
+    </div>
+
+	<div id="research profile" class="tab-content">
+      <h2>Research profile</h2>
+      <ul class="list-disc">
+		        <li><p class="text-s text-blue-300 font-semibold mb-2">Google Scholar</p>
+				<a href="https://scholar.google.com/citations?user=_uFidiYAAAAJ" target="_blank">View Profile</a>
+				<li><p class="text-s text-blue-300 font-semibold mb-2">Orcid Profile</p>
+				<a href="https://orcid.org/my-orcid?orcid=0000-0001-9249-0374" target="_blank">View Profile</a>
+				<li><p class="text-s text-blue-300 font-semibold mb-2">Research Gate Profile</p>
+				<a href="https://www.researchgate.net" target="_blank">View Profile</a>
       </ul>
-    </section>
-    <section>
-      <h2>Publications & Patents</h2>
-      <div class="grid">
-        <div class="card">
-          <strong>20+ Research Papers</strong>
-          <p>Published across IJETAE, IJEET, IJRG, and more.</p>
-        </div>
-        <div class="card">
-          <strong>2 Patents</strong>
-          <p>Published in 2023 and 2025 under Govt. of India.</p>
-        </div>
+    </div>
+    <div id="publications" class="tab-content">
+      <h2>Publications</h2>
+      <p>20+ international and national papers published in reputed journals including SCOPUS-indexed ones.</p>
+	  <h2 class="text-xl font-bold mb-4 text-white-800">Research Paper Publication Details</h2>
+
+		<div class="overflow-x-auto shadow-md rounded-xl">
+		<table class="min-w-full bg-grey border border-white-200 text-sm text-left text-grey-700">
+		<thead class="bg-grey-800 text-grey-800 uppercase tracking-wider">
+      <tr>
+        <th class="px-4 py-3 border border-white">Sr. No</th>
+        <th class="px-4 py-3 border border-white">Paper Title</th>
+        <th class="px-4 py-3 border border-white">Name of Journal</th>
+        <th class="px-4 py-3 border border-white">Year</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <tr><td class="px-4 py-2">1</td><td class="px-4 py-2">Investigation of Tribological Properties for Brake Pad Material: A Review</td><td class="px-4 py-2">International Journal of Emerging Technology and Advanced Engineering (IJETAE)</td><td class="px-4 py-2">2014</td></tr>
+      <tr><td class="px-4 py-2">2</td><td class="px-4 py-2">Experimental Investigation of Tribological Properties for Brake Pad Material Using Steel wool</td><td class="px-4 py-2">International Journal of Emerging Technology and Advanced Engineering (IJETAE)</td><td class="px-4 py-2">2014</td></tr>
+      <tr><td class="px-4 py-2">3</td><td class="px-4 py-2">Fatigue Finite element analysis of Pressure vessel for vertical acceleration loading</td><td class="px-4 py-2">International Journal of Emerging Technology and Advanced Engineering (IJETAE)</td><td class="px-4 py-2">2015</td></tr>
+      <tr><td class="px-4 py-2">4</td><td class="px-4 py-2">Fatigue Finite element analysis of air receiver for pressure loading</td><td class="px-4 py-2">International Journal of Emerging Technology and Advanced Engineering (IJETAE)</td><td class="px-4 py-2">2015</td></tr>
+      <tr><td class="px-4 py-2">5</td><td class="px-4 py-2">Recent Technologies in Automobiles: Anti Theft Security System</td><td class="px-4 py-2">AR Digitech International Journal of Engineering Education and Technology (IJEET)</td><td class="px-4 py-2">2015</td></tr>
+      <tr><td class="px-4 py-2">6</td><td class="px-4 py-2">Stress Analysis and Optimization of forged steel single cylinder engine connecting rod subjected to dynamic loading</td><td class="px-4 py-2">AR Digitech International Journal of Engineering Education and Technology (IJEET)</td><td class="px-4 py-2">2015</td></tr>
+      <tr><td class="px-4 py-2">7</td><td class="px-4 py-2">Failure Mode & Effect Analysis of Leaf Spring Using Ansys</td><td class="px-4 py-2">AR Digitech International Journal of Engineering Education and Technology (IJEET)</td><td class="px-4 py-2">2015</td></tr>
+      <tr><td class="px-4 py-2">8</td><td class="px-4 py-2">Detection Of Cracks In Simply Supported Beam By Using Various Techniques: A Review</td><td class="px-4 py-2">International Journal of Research- Granthaalayah (IJRG)</td><td class="px-4 py-2">2015</td></tr>
+      <tr><td class="px-4 py-2">9</td><td class="px-4 py-2">Energy Conversion Phenomenon In Implementation Of Water Lifting By Using Pendulum Effect</td><td class="px-4 py-2">International Journal of Innovation in Engineering, Research and Technology [IJIERT] ICITDCEME’15</td><td class="px-4 py-2">2016</td></tr>
+      <tr><td class="px-4 py-2">10</td><td class="px-4 py-2">Review on Design Basics of Industrial Application Gear Box</td><td class="px-4 py-2">International Journal of Recent Development in Engineering and Technology (IJRDET)</td><td class="px-4 py-2">2016</td></tr>
+      <tr><td class="px-4 py-2">11</td><td class="px-4 py-2">Recent Development in Humanoid Robot</td><td class="px-4 py-2">International Journal of Emerging Technology and Advanced Engineering (IJETAE)</td><td class="px-4 py-2">2018</td></tr>
+      <tr><td class="px-4 py-2">12</td><td class="px-4 py-2">Finite Element Analysis of Coir Fiber Based Natural Composite</td><td class="px-4 py-2">International Journal of Emerging Technology and Advanced Engineering (IJETAE)</td><td class="px-4 py-2">2019</td></tr>
+      <tr><td class="px-4 py-2">13</td><td class="px-4 py-2">Braking System Approaching Towards the Betterment And It’s Consequences</td><td class="px-4 py-2">International Research Journal on Advance Science Hub</td><td class="px-4 py-2">2020</td></tr>
+      <tr><td class="px-4 py-2">14</td><td class="px-4 py-2">Design Of Solenoid Operating Valve Applying Design For Six Sigma Methodology</td><td class="px-4 py-2">International Journal of Creative Research Thoughts (IJCRT)</td><td class="px-4 py-2">2021</td></tr>
+      <tr><td class="px-4 py-2">15</td><td class="px-4 py-2">Mechanical and Tribological Properties of Nano Composites Under Dry Sliding Conditions: A study and Investigation</td><td class="px-4 py-2">International Journal of Mechanical Engineering</td><td class="px-4 py-2">2022</td></tr>
+      <tr><td class="px-4 py-2">16</td><td class="px-4 py-2">A layer wise finite element formulation for the free vibration analysis of laminated composite and sandwich plates</td><td class="px-4 py-2">International Journal of Mechanical Engineering</td><td class="px-4 py-2">2022</td></tr>
+      <tr><td class="px-4 py-2">17</td><td class="px-4 py-2">Study and modeling of a rotor supported by a scaffold through experimentation: A Review</td><td class="px-4 py-2">Tanz Journal</td><td class="px-4 py-2">2023</td></tr>
+      <tr><td class="px-4 py-2">18</td><td class="px-4 py-2">Generating Simulation data of CNG Genset Engine to Predict various blends of HCNG for Achieving CPCB IV Emission Norms</td><td class="px-4 py-2">Tanz Journal</td><td class="px-4 py-2">2023</td></tr>
+      <tr><td class="px-4 py-2">19</td><td class="px-4 py-2">A better technique for controlling torque to preload relationship in the accurate assembly of tiny threaded bolt joints</td><td class="px-4 py-2">International Journal of Fracture Mechanics and Damage Science</td><td class="px-4 py-2">2024</td></tr>
+      <tr><td class="px-4 py-2">20</td><td class="px-4 py-2">Dynamic Analysis of Rotor Stability by Investigating Mass and Speed Variations for Enhanced System Stability</td><td class="px-4 py-2">Tanz Journal</td><td class="px-4 py-2">2024</td></tr>
+      <tr><td class="px-4 py-2">21</td><td class="px-4 py-2">Machining of hybrid Al alloy: a metal cutting parameters measurement approach</td><td class="px-4 py-2">JMST Advances</td><td class="px-4 py-2">2025</td></tr>
+    </tbody>
+  </table>
+</div>
+  
+    </div>
+
+    <div id="patents" class="tab-content">
+      <h2>Patents</h2>
+      <ul class="list-disc">
+        <li>Nano Composite Brake Pads</li>
+        <li>AI Drone for Real-Time Crowd Monitoring</li>
+        <li>Bio-Mechanical Automation Robot</li>
+      </ul>
+	  <h2 class="text-xl font-bold mb-4 text-white-800">Patent Publication Details</h2>
+
+<div class="overflow-x-auto shadow-md rounded-xl">
+  <table class="min-w-full bg-grey border border-gray-200 text-sm text-left text-white-700">
+    <thead class="bg-grey-800 text-white-800 uppercase tracking-wider">
+      <tr>
+        <th class="px-4 py-3 border border-gray-300">Sr. No</th>
+        <th class="px-4 py-3 border border-gray-300">Title of Invention</th>
+        <th class="px-4 py-3 border border-gray-300">Publisher</th>
+        <th class="px-4 py-3 border border-gray-300">Year of Publication</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-white-200">
+      <tr>
+        <td class="px-4 py-2">1</td>
+        <td class="px-4 py-2">Study & Investigation On Mechanical & Tribological Properties of Nano Composites under Dry Sliding Condition</td>
+        <td class="px-4 py-2">Government of India</td>
+        <td class="px-4 py-2">2023</td>
+      </tr>
+      <tr>
+        <td class="px-4 py-2">2</td>
+        <td class="px-4 py-2">Glass fibre reinforced gypsum hallow bricks</td>
+        <td class="px-4 py-2">Government of India: Filled</td>
+        <td class="px-4 py-2">2025</td>
+      </tr>
+      <tr>
+        <td class="px-4 py-2">3</td>
+        <td class="px-4 py-2">AI Based Drone For Real-Time Crowd Detection And Management</td>
+        <td class="px-4 py-2">Government of India (Design Patent): Filled</td>
+        <td class="px-4 py-2">2025</td>
+      </tr>
+      <tr>
+        <td class="px-4 py-2">4</td>
+        <td class="px-4 py-2">Self-Repairing and Adaptive Bio-Mechanical Robots for Industrial Automation and Environmental Optimization</td>
+        <td class="px-4 py-2">Government of India (Design Patent): Filled</td>
+        <td class="px-4 py-2">2025</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+    </div>
+
+<div id="book" class="tab-content">
+      <h2>Book</h2>
+      <ul class="list-disc">
+        <li>3+ Books published till date & more are inline</li>
+		</ul>
+		
+		<h2 class="text-xl font-bold mb-4 text-white-800">Book Publication Details</h2>
+
+<div class="overflow-x-auto shadow-md rounded-xl">
+  <table class="min-w-full bg-grey border border-white-200 text-sm text-left text-white-700">
+    <thead class="bg-grey-100 text-white-800 uppercase tracking-wider">
+      <tr>
+        <th class="px-4 py-3 border border-gray-300">Sr. No</th>
+        <th class="px-4 py-3 border border-gray-300">Title</th>
+        <th class="px-4 py-3 border border-gray-300">Name of Publisher</th>
+        <th class="px-4 py-3 border border-gray-300">ISBN</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <tr>
+        <td class="px-4 py-2">1</td>
+        <td class="px-4 py-2">Futuristic Trends in Mechanical Engineering</td>
+        <td class="px-4 py-2">Iterative International Publishers</td>
+        <td class="px-4 py-2">978-93-6252-146-0</td>
+      </tr>
+      <tr>
+        <td class="px-4 py-2">2</td>
+        <td class="px-4 py-2">Mechatronics</td>
+        <td class="px-4 py-2">Quilltech Publications</td>
+        <td class="px-4 py-2">978-93-6786-782-2</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+		
+    </div>
+
+    <div id="teaching" class="tab-content">
+      <h2>Teaching</h2>
+      <ul class="list-disc">
+        <li>Undergradute Student</li>
+        <li>Post Graduate Student</li>
+        <li>Research Scholar</li>
+      </ul>
+    </div>
+
+    <div id="academics" class="tab-content">
+      <h2>Academic Contributions</h2>
+			<div class="space-y-4">
+				<details class="bg-white/10 p-4 rounded-lg backdrop-blur-lg">
+				<summary class="cursor-pointer text-lg font-semibold text-white-300">Course File : SE</summary>
+				<ul class="list-disc ml-6 mt-2">
+		  			  
+		  
+				<!DOCTYPE html>
+					<html lang="en">
+						<head>
+							<meta charset="UTF-8">
+								<title>Course File Index</title>
+									<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 0;
+    }
+    .info {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #555;
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f2f2f2;
+	  color: black;
+    }
+    
+    a {
+      color: blue;
+      text-decoration: underline;
+    }
+									</style>
+						</head>
+								<body>
+
+								<h2>COURSE FILE INDEX</h2>
+								<div class="info">
+								<strong>Name of Faculty:</strong> Dr. A. B. Bhane &nbsp;&nbsp;&nbsp;&nbsp;
+								<strong>Subject:</strong> EMM<br>
+								<strong>Academic Year:</strong> 2025-26 &nbsp;&nbsp;&nbsp;&nbsp;
+								<strong>Class:</strong> SE &nbsp;&nbsp;&nbsp;&nbsp;
+								<strong>Semester:</strong> III
+								</div>
+
+						<table>
+							<thead>
+							<tr>
+								<th>Sr. No.</th>
+								<th>Particulars</th>
+								<th>Link</th>
+									</tr>
+									</thead>
+								<tbody>
+      <tr><td>1</td><td>Vision and Mission of Institute and Department</td><td><a href="https://drive.google.com/file/d/1POq7DbTuvbjl0gBScmGqt-FmUSU6cxVn/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>2</td><td>POs, PSOs, PEOs, COs</td><td><a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a></td></tr>
+      <tr><td>3</td><td>Academic Calendar of Institute and Department</td><td><a href="https://drive.google.com/file/d/1lP_Gp-1ORXYP0Wwg2bnFKOf1QOpVZtSC/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>4</td><td>Class & Personal Time Table</td><td><a href="https://drive.google.com/file/d/11X3kfGYKVQZg4j-jZndbq5a5GmBjIT7A/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>5</td><td>Syllabus Structure & Course Syllabus</td><td><a href="https://drive.google.com/file/d/1vXGsTxK578Pp16QFt0YC2wkpDhiEzDSi/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>6</td><td>Teaching Plan, Laboratory Plan</td><td><a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a></td></tr>
+      <tr>
+        <td>7</td>
+        <td>
+          i. Unit wise notes<br>
+          ii. Unit wise Question Bank<br>
+          iii. PPTs<br>
+          iv. NPTEL video / PDF<br>
+          v. List of Video clips / Flip Videos<br>
+          vi. List and link of video lectures
+        </td>
+        <td>
+          <a href="https://drive.google.com/file/d/16tXkm8itEmK-O8oJNiPHSgR0n5g4ewni/view?usp=sharing" target="_blank">View</a><br>
+          <a href="https://drive.google.com/drive/folders/19kocuFCASKtxqgyP5XzqMDj6N4pqTUMT?usp=drive_link" target="_blank">View</a><br>
+          <a href="https://drive.google.com/drive/folders/1OTl36WrrGu_k-rUoDZfY43IiRg62jNdN?usp=drive_link" target="_blank">View</a><br>
+          <a href="https://drive.google.com/file/d/11wBWYkjZ1suBt8lv_YW_xxwZn-6bRH1U/view?usp=drive_link" target="_blank">View</a><br>
+          <a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a><br>
+          <a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a>
+        </td>
+      </tr>
+      <tr><td>8</td><td>Content Beyond Syllabus</td><td><a href="https://drive.google.com/file/d/1sybZS5Kk91xlqfxXRvhB_fz3wbmdMCW2/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>9</td><td>Last Three Question Papers And its Solution</td><td><a href="https://drive.google.com/file/d/1tXproCS8Q_zlDfAWkwAVGtQRNNlcpg71/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>10</td><td>Referred Journal Papers</td><td><a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a></td></tr>
+      <tr><td>11</td><td>Mapping of COs and POs & Attainments</td><td><a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a></td></tr>
+      <tr><td>12</td><td>Gap Identification</td><td><a href="https://drive.google.com/file/d/1JkjIwB-bwftXLSa3Mi6HInh21AOrkcWO/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>13</td><td>List of Practicals</td><td><a href="NA" target="_blank">NA</a></td></tr>
+      <tr><td>14</td><td>List of Slow Learners & Advance Learners</td><td><a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a></td></tr>
+      <tr><td>15</td><td>Remedial Class Time Table</td><td><a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a></td></tr>
+      <tr><td>16</td><td>Continuous Assessment Sheet</td><td><a href="NA" target="_blank">NA</a></td></tr>
+      <tr><td>17</td><td>Gate Question Papers</td><td><a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a></td></tr>
+      <tr><td>18</td><td>List of Project Guided</td><td><a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a></td></tr>
+      <tr><td>19</td><td>IPR & Patent Details</td><td><a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a></td></tr>
+      <tr><td>20</td><td>Subject Result Analysis (Last 03 Years)</td><td><a href="https://drive.google.com/file/d/1tXproCS8Q_zlDfAWkwAVGtQRNNlcpg71/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>21</td><td>Students Attendance Register</td><td><a href="https://drive.google.com/file/d/1DWv_kMfQVCbYcJ-0ZP7zzO5rau_G7z7D/view?usp=drive_link" target="_blank">View</a></td></tr>
+							</tbody>
+						</table>
+
+</body>
+</html>
+
+          </ul>
+        </details>
+		
+		<details class="bg-white/10 p-4 rounded-lg backdrop-blur-lg">
+				<summary class="cursor-pointer text-lg font-semibold text-white-300">Course File : TE</summary>
+				<ul class="list-disc ml-6 mt-2">
+		  			  
+		  
+				<!DOCTYPE html>
+					<html lang="en">
+						<head>
+							<meta charset="UTF-8">
+								<title>Course File Index</title>
+									<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 0;
+    }
+    .info {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #555;
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f2f2f2;
+	  color: black;
+    }
+    
+    a {
+      color: blue;
+      text-decoration: underline;
+    }
+									</style>
+						</head>
+								<body>
+
+								<h2>COURSE FILE INDEX</h2>
+								<div class="info">
+								<strong>Name of Faculty:</strong> Dr. A. B. Bhane &nbsp;&nbsp;&nbsp;&nbsp;
+								<strong>Subject:</strong> Mechatronics<br>
+								<strong>Academic Year:</strong> 2025-26 &nbsp;&nbsp;&nbsp;&nbsp;
+								<strong>Class:</strong> TE &nbsp;&nbsp;&nbsp;&nbsp;
+								<strong>Semester:</strong> V
+								</div>
+
+						<table>
+							<thead>
+							<tr>
+								<th>Sr. No.</th>
+								<th>Particulars</th>
+								<th>Link</th>
+									</tr>
+									</thead>
+								<tbody>
+      <tr><td>1</td><td>Vision and Mission of Institute and Department</td><td><a href="https://drive.google.com/file/d/12rW-6K7Dgujq1wSB2pYdU2DAV1-W3sbQ/view?usp=sharing" target="_blank">View</a></td></tr>
+      <tr><td>2</td><td>POs, PSOs, PEOs, COs</td><td><a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a></td></tr>
+      <tr><td>3</td><td>Academic Calendar of Institute and Department</td><td><a href="https://drive.google.com/file/d/15rQb39LGXYJXedWrSGYT47V6DJYUHeav/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>4</td><td>Class & Personal Time Table</td><td><a href="https://drive.google.com/file/d/1JvIXiNEn4Dg8Sre-ucdT7ybi01OHUw0x/view?usp=sharing" target="_blank">View</a></td></tr>
+      <tr><td>5</td><td>Syllabus Structure & Course Syllabus</td><td><a href="https://drive.google.com/file/d/1SxsXXo02V1R3KIbl2K5_uAHJXbi_9LcT/view?usp=sharing" target="_blank">View</a></td></tr>
+      <tr><td>6</td><td>Teaching Plan, Laboratory Plan</td><td><a href="https://drive.google.com/file/d/1MK0QilbDz5XPvkLD8yr2mtIZTjHx97h3/view?usp=sharing" target="_blank">View</a></td></tr>
+      <tr>
+        <td>7</td>
+        <td>
+          i. Unit wise notes<br>
+          ii. Unit wise Question Bank<br>
+          iii. PPTs<br>
+          iv. NPTEL video / PDF<br>
+          v. List of Video clips / Flip Videos<br>
+          vi. List and link of video lectures
+        </td>
+        <td>
+          <a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a><br>
+          <a href="https://drive.google.com/drive/folders/1oQA6UGLMt9_59trm7Yo2yv5ACT_4TvvA?usp=sharing" target="_blank">View</a><br>
+          <a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a><br>
+          <a href="https://drive.google.com/file/d/1_f14wtu45pWGrtU7QcTpvOT3RELON-gN/view?usp=sharing" target="_blank">View</a><br>
+          <a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a><br>
+          <a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a>
+        </td>
+      </tr>
+      <tr><td>8</td><td>Content Beyond Syllabus</td><td><a href="https://drive.google.com/file/d/18FH4OtqUZ0uEeDoK5YDg2_GiPoDmWoaV/view?usp=sharing" target="_blank">View</a></td></tr>
+      <tr><td>9</td><td>Last Three Question Papers And its Solution</td><td><a href="https://drive.google.com/drive/folders/1cEbTONleGUkD10zcNWEQto9Yd9kVG7HC?usp=sharing" target="_blank">View</a></td></tr>
+      <tr><td>10</td><td>Referred Journal Papers</td><td><a href="https://drive.google.com/drive/folders/1mvTc8V6hhzeEyhEVJ9ms7M-y7nZtAcCu?usp=sharing" target="_blank">View</a></td></tr>
+      <tr><td>11</td><td>Mapping of COs and POs & Attainments</td><td><a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a></td></tr>
+      <tr><td>12</td><td>Gap Identification</td><td><a href="https://drive.google.com/file/d/1BDAJjKkLglsbFExrgRV6qSvuYATVLKEb/view?usp=sharing" target="_blank">View</a></td></tr>
+      <tr><td>13</td><td>List of Practicals</td><td><a href="https://drive.google.com/file/d/1VgIkk_cNd-_ilLwc1rU0pDyUGkBpna6L/view?usp=sharing" target="_blank">View</a></td></tr>
+      <tr><td>14</td><td>List of Slow Learners & Advance Learners</td><td><a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a></td></tr>
+      <tr><td>15</td><td>Remedial Class Time Table</td><td><a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a></td></tr>
+      <tr><td>16</td><td>Continuous Assessment Sheet</td><td><a href="https://drive.google.com/file/d/1wbOx8-moNA4KmJ84Iv03NrUkHhkvn9WV/view?usp=sharing" target="_blank">View</a></td></tr>
+      <tr><td>17</td><td>Gate Question Papers</td><td><a href="https://www.gatenotes.in/gate-question-paper-mechanical.php" target="_blank">View Web Link</a></td></tr>
+      <tr><td>18</td><td>List of Project Guided</td><td><a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a></td></tr>
+      <tr><td>19</td><td>IPR & Patent Details</td><td><a href="https://www.sndcoe.ac.in" target="_blank">www.sndcoe.ac.in</a></td></tr>
+      <tr><td>20</td><td>Subject Result Analysis (Last 03 Years)</td><td><a href="https://drive.google.com/file/d/18k9hsf3XTKD0AkSlBO0af50cgFL2pYjD/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>21</td><td>Students Attendance Register</td><td><a href="https://drive.google.com/file/d/1-9H7WqFFpfYNxhjLVM9G6EMe1QSYCKwG/view?usp=sharing" target="_blank">View</a></td></tr>
+							</tbody>
+						</table>
+
+</body>
+</html>
+
+          </ul>
+        </details>
+		
+
+        <details class="bg-white/10 p-4 rounded-lg backdrop-blur-lg">
+          <summary class="cursor-pointer text-lg font-semibold text-white-300">Student Study Material</summary>
+          <ul class="list-disc ml-6 mt-2">
+            <li><a href="files/MD_notes.pdf" class="text-blue-300 hover:underline">Machine Design Notes</a></li>
+            <li><a href="files/Vibration_ppt.pptx" class="text-blue-300 hover:underline">Vibration PPT</a></li>
+            <li><a href="files/Mechatronics_book.pdf" class="text-blue-300 hover:underline">Mechatronics Reference Book</a></li>
+          </ul>
+        </details>
+
+        <details class="bg-white/10 p-4 rounded-lg backdrop-blur-lg">
+          <summary class="cursor-pointer text-lg font-semibold text-white-300">Tutor Batch</summary>
+          <p class="mt-2 ml-4 text-gray-200">Mentoring assigned students for academic and personal development.</p>
+		  <ul class="list-disc ml-6 mt-2">
+	        <li><a href="https://drive.google.com/file/d/1YJy4Ku0ra3J625TCGIFylxbsFbbQEWW7/view?usp=drive_link" class="text-blue-300 hover:underline">Responsibility of Mentor/Teacher Guardian</a></li>
+            <li><a href="https://drive.google.com/file/d/1OLE4KJnMsrXSIvxp84Pa4qzEs35Rgs1N/view?usp=drive_link" class="text-blue-300 hover:underline">Tutor Batch Details</a></li>
+            <li><a href="https://drive.google.com/file/d/1Y8lHeGIPnCZrz4IZS8yfoImBZmITwHUC/view?usp=drive_link" class="text-blue-300 hover:underline">MoM Record</a></li> 
+	  	  </ul>
+		    
+        </details>
+		
+		
+		<details class="bg-white/10 p-4 rounded-lg backdrop-blur-lg">
+				<summary class="cursor-pointer text-lg font-semibold text-white-300">Tutor File</summary>
+				<ul class="list-disc ml-6 mt-2">
+		  			  
+		  
+				<!DOCTYPE html>
+					<html lang="en">
+						<head>
+							<meta charset="UTF-8">
+								<title>Tutor File Index</title>
+									<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 0;
+    }
+    .info {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #555;
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f2f2f2;
+	  color: black;
+    }
+    
+    a {
+      color: blue;
+      text-decoration: underline;
+    }
+									</style>
+						</head>
+								<body>
+
+								<h2>TUTOR FILE INDEX</h2>
+								<div class="info">
+								<strong>Name of Faculty:</strong> Dr. A. B. Bhane &nbsp;&nbsp;&nbsp;&nbsp;
+								<strong>Academic Year:</strong> 2025-26 &nbsp;&nbsp;&nbsp;&nbsp;
+								<strong>Class:</strong> TE &nbsp;&nbsp;&nbsp;&nbsp;
+								<strong>Batch:</strong> T3
+								</div>
+
+						<table>
+							<thead>
+							<tr>
+								<th>Sr. No.</th>
+								<th>Particulars</th>
+								<th>Link</th>
+									</tr>
+									</thead>
+								<tbody>
+      <tr><td>1</td><td>Student Resume</td><td><a href="https://drive.google.com/file/d/1OLE4KJnMsrXSIvxp84Pa4qzEs35Rgs1N/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>2</td><td>Result</td><td><a href="https://drive.google.com/file/d/1OLE4KJnMsrXSIvxp84Pa4qzEs35Rgs1N/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>3</td><td>Class Test / Insem Marks</td><td><a href="https://drive.google.com/file/d/1OLE4KJnMsrXSIvxp84Pa4qzEs35Rgs1N/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>4</td><td>Slow learner Fast learner Identification</td><td><a href="https://drive.google.com/file/d/1OLE4KJnMsrXSIvxp84Pa4qzEs35Rgs1N/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>5</td><td>Remedial Measure ( Time Table )</td><td><a href="https://drive.google.com/file/d/1OLE4KJnMsrXSIvxp84Pa4qzEs35Rgs1N/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>6</td><td>Attendance</td><td><a href="https://drive.google.com/file/d/1OLE4KJnMsrXSIvxp84Pa4qzEs35Rgs1N/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>7</td><td>Calling Record</td><td><a href="https://drive.google.com/file/d/1OLE4KJnMsrXSIvxp84Pa4qzEs35Rgs1N/view?usp=drive_link" target="_blank">View</a></td></tr>
+      <tr><td>8</td><td>Minutes of Meeting Conducted</td><td><a href="https://drive.google.com/file/d/1OLE4KJnMsrXSIvxp84Pa4qzEs35Rgs1N/view?usp=drive_link" target="_blank">View</a></td></tr>
+								</tbody>
+						</table>
+
+</body>
+</html>
+
+          </ul>
+        </details>
+		
+		
+		
+
+        <details class="bg-white/10 p-4 rounded-lg backdrop-blur-lg">
+          <summary class="cursor-pointer text-lg font-semibold text-white-300">Institutional Responsibilities</summary>
+          <ul class="list-disc ml-6 mt-2 text-gray-200">
+            <li>IIC Coordinator</li>
+            <li>Institute Level NBA Coordinator</li>
+			<li>UG & PG Teacher</li>
+            <li>Teacher Gaurdian</li>
+          </ul>
+        </details>
       </div>
-    </section>
-    <section>
-      <h2>Skills & Subjects</h2>
-      <ul>
-        <li>Robotics, Design, Mechatronics, Metallurgy</li>
-        <li>Engineering Graphics, Machine Design, AIML</li>
-        <li>Research Methodology, Automation</li>
-      </ul>
-    </section>
-    <section>
+    </div>
+
+    <div id="contact" class="tab-content">
       <h2>Contact</h2>
-      <p>Email: professorajeetbhane@gmail.com</p>
-      <p>Mobile: +91 9960533184</p>
-      <p>Location: Pune, Maharashtra, India</p>
-      <a href="mailto:professorajeetbhane@gmail.com" class="btn">Send Email</a>
-    </section>
-  </div>
-  <footer>
-    &copy; 2025 Dr. Ajeet Bhagwat Bhane. All rights reserved.
+      <p><strong>Email:</strong> ajeetbhane@gmail.com</p>
+      <p><strong>Phone:</strong> +91 9960528289</p>
+    </div>
+  </main>
+
+  <footer class="text-center text-gray-400 pt-8">
+    <p>&copy; 2025 Dr. Ajeet Bhagwat Bhane – All rights reserved.</p>
   </footer>
+</div>
+
+<script>
+  function showTab(id) {
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
 </body>
 </html>
