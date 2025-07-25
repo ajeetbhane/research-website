@@ -647,3 +647,48 @@
 </script>
 </body>
 </html>
+
+<div style="width:100%;display:flex;justify-content:center;padding:7px 0;">
+  <button id="viewCounter" style="
+    background:linear-gradient(135deg,#ff6ec4,#7873f5,#4deeea,#74f9ff);
+    background-size:400% 400%;
+    color:#fff;
+    padding:8px 20px;
+    font-size:10px;
+    border:none;
+    border-radius:10px;
+    box-shadow:0 3px 6px rgba(255,255,255,0.08),inset 0 -3px 6px rgba(0,0,0,0.25);
+    font-weight:bold;
+    cursor:default;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    animation:gradientShift 6s ease infinite,blinkText 1.5s step-start infinite,scrollText 10s linear infinite;
+  ">
+    👁️ Views: <span id="viewCount">0</span>
+  </button>
+</div>
+
+<script>
+  const key = 'short_view_count';
+  let views = localStorage.getItem(key);
+  views = views ? +views + 1 : 1;
+  localStorage.setItem(key, views);
+  document.getElementById('viewCount').textContent = views;
+</script>
+
+<style>
+  @keyframes gradientShift {
+    0% {background-position:0% 50%}
+    50% {background-position:100% 50%}
+    100% {background-position:0% 50%}
+  }
+  @keyframes blinkText {
+    0%,100% {opacity:1}
+    50% {opacity:0.8}
+  }
+  @keyframes scrollText {
+    0% {transform:translateX(0%)}
+    100% {transform:translateX(-10%)}
+  }
+</style>
