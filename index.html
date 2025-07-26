@@ -1,3 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Drive Image Slider</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      font-family: sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    .scroll-container {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    .scroll-track {
+      display: flex;
+      animation: scroll-left 20s linear infinite;
+    }
+
+    .scroll-track img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      margin-right: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      flex-shrink: 0;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Transforming World</h2>
+
+  <div class="scroll-container">
+    <div class="scroll-track">
+      <!-- Images repeated twice for seamless loop -->
+      <img src="https://drive.google.com/uc?export=view&id=1EWRFehrm0NGULXABRGazN0Edstsz1D-h" alt="Img1">
+      <img src="https://drive.google.com/uc?export=view&id=1Nm-WQqprdqcxgwq_zQ_qa1VdmNUtdlGH" alt="Img2">
+      <img src="https://drive.google.com/uc?export=view&id=1atJxrLu0ZA4wquXeVdd_H9Xzwwd9SiUV" alt="Img3">
+      <img src="https://drive.google.com/uc?export=view&id=1iGX9WXz0f3kr9E_rtlRBeJ2dq_331QLl" alt="Img4">
+
+      <!-- Duplicate for continuous loop -->
+      <img src="https://drive.google.com/uc?export=view&id=1EWRFehrm0NGULXABRGazN0Edstsz1D-h" alt="Img1-dup">
+      <img src="https://drive.google.com/uc?export=view&id=1Nm-WQqprdqcxgwq_zQ_qa1VdmNUtdlGH" alt="Img2-dup">
+      <img src="https://drive.google.com/uc?export=view&id=1atJxrLu0ZA4wquXeVdd_H9Xzwwd9SiUV" alt="Img3-dup">
+      <img src="https://drive.google.com/uc?export=view&id=1iGX9WXz0f3kr9E_rtlRBeJ2dq_331QLl" alt="Img4-dup">
+    </div>
+  </div>
+
+</body>
+</html>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
